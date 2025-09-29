@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materio Dashboard Clone</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://kit.fontawesome.com/5fcf92ced5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="dashboard">
+        <header class="topbar">
+            <div class="logo">
+                <img src="img/Logo.png" alt="logo">
+                <h1 class="h1"><a href="#">MATERIO</a></h1>
+            </div>
+            <div class="input">
+                <input type="text" class="search">
+            </div>
+            <div class="user-icons">
+                <a href=""><i class="fa-solid fa-moon"></i></a>
+                <a href=""><i class="fa-solid fa-bell"></i></a>
+                <a href="" class="profileLink">
+
+                    <img src="img/userAvatar.png" class="profilImg" alt="user profil image">
+                    <div class="userStatus"></div>
+                </a>
+                <button id="hamburger" class="hamburger" onclick="toggleSidebar()">&#9776;</button>
+            </div>
+        </header>
+
+        <aside class="sidebar clearfix "  id="sidebar">
+
+            <ul class="menu" id="menu">
+                <li class="active"> <i class="fa-regular fa-house"></i> <a href="">Dashboard</a></li>
+                <li><i class="fa-solid fa-user-gear"></i><a href="">Account Settings</a></li>
+                <div class="menuLine">
+                    <p> <span>PAGES</span></p>
+                </div>
+                <li> <i class="fa-solid fa-right-to-bracket"></i><a href="">Login</a></li>
+                <li> <i class="fa-solid fa-user-plus"></i><a href="">Register</a></li>
+                <li> <i class="fa-solid fa-circle-exclamation"></i><a href="">Error</a></li>
+                <div class="menuLine">
+                    <p> <span>USER INTERFACE</span></p>
+                </div>
+                <li> <i>Aa</i><a href="">Typography</a></li>
+                <li> <i class="fa-solid fa-atom"></i><a href="">icons</a></li>
+                <li> <i class="fa-solid fa-credit-card"></i></i><a href="">Cards</a></li>
+                <li><i class="fa-solid fa-table"></i><a href="">Tables</a></li>
+                <li><i class="fa-solid fa-cubes"></i><a href="">Form Layouts</a></li>
+
+            </ul>
+        </aside>
+
+
+        <main class="main">
+
+            <section class="cards-grid clearfix">
+                <div class="card-highlight box">
+                    <h2 class="h2">Congratulations John! 🥳 </h2>
+                    <p class="p smallGrayText">Best seller of the month</p>
+                    <h3 class="h3">$42.8k</h3>
+                    <button class="button">VIEW SALES</button>
+                </div>
+
+                <div class="card-stats box">
+                    <i class=" threeDots fa-solid fa-ellipsis-vertical"></i>
+
+                    <h2 class="h2">Statistics Cards</h2>
+                    <p class="p smallGrayText"><span style="color: black;">Total 48% growth </span>😎 this month</p>
+
+                    <ul>
+                        <li class="clearfix">
+                            <i class="blue fa-solid fa-chart-line"></i>
+                            <p class="p">Sales</p>
+                            <h3 class="h3">245K</h3>
+                        </li>
+                        <li class="clearfix">
+                            <i class="green fa-solid fa-user"></i>
+                            <p class="p">Customer</p>
+                            <h3 class="h3">12.5K</h3>
+                        </li>
+                        <li class="clearfix">
+                            <i class="orange fa-solid fa-laptop"></i>
+                            <p class="p">Products</p>
+                            <h3 class="h3">1.54K</h3>
+                        </li>
+
+                        <li class="clearfix">
+                            <i class="lightBlue fa-solid fa-dollar-sign"></i>
+                            <p class="p">Revenue</p>
+                            <h3 class="h3">$88K</h3>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="charts clearfix">
+
+                <div class="card-chart box">
+                    <i class=" threeDots fa-solid fa-ellipsis-vertical"></i>
+
+                    <h4>Weekly Overview</h4>
+
+                    <figure>
+                        <img class="chartImg" src="img/chart.png" alt="Image of chart">
+                    </figure>
+                    <p class="smallGrayText">Your sales performance is <b style="color: black;">45%</b> better compared to last month</p>
+                    <button class="details button">DETAILS</button>
+                </div>
+
+
+                <div class="card-earning box">
+                    <i class=" threeDots fa-solid fa-ellipsis-vertical"></i>
+                    <h4 class="h4">Total Earnings</h4>
+
+                    <h5 class="h5">$24,895 <sup><i class="fa-solid fa-caret-up"><span>10%</span></i></sup> </h5>
+                    <p class="p smallGrayText">Compared to $84,325 last year</p>
+
+
+
+                    <div class="card-earning-title">
+                        <div class="icon clearfix">
+                            <figure> <img src="img/zipcar.png" class="itemImg" alt="Zipcar"></figure>
+
+                            <div class="details">
+                                <h6 class="h6">Zipcar</h6>
+                                <p class="p">Vuejs, React & HTML</p>
+                            </div>
+                            <div class="amount">
+                                <h6 class="h6">$24,895.65</h6>
+                                <div class="progress">
+                                    <span class="zipcarProgress"> </span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="icon clearfix">
+                            <figure><img src="img/bitbank.png" class="itemImg" alt="Bitbank"></figure>
+
+                            <div class="details">
+                                <h6 class="h6">Bitbank</h6>
+                                <p class="p">Sketch, Figma & XD</p>
+
+                            </div>
+                            <div class="amount">
+                                <h6 class="h6">$8,650.20</h6>
+                                <div class="progress ">
+                                    <span class="bitbankProgress"></span>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="icon clearfix">
+                            <figure><img src="img/aviato.png" class="itemImg" alt="Aviato"></figure>
+
+                            <div class="details">
+                                <h6 class="h6">Aviato</h6>
+                                <p class="p">HTML & Angular</p>
+                            </div>
+                            <div class="amount">
+                                <h6 class="h6">$1,245.80</h6>
+                                <div class="progress">
+                                    <span class="aviatoProgress"></span>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box-grid clearfix">
+                    <div class="box box-left-top">
+                        <i class=" threeDots fa-solid fa-ellipsis-vertical"></i>
+                        <i class="green icon fa-solid fa-chart-simple"></i>
+
+                        <p class="text">Total Profit</p>
+                        <p class="text">$25.6K <sup style="color: green;">+42%</sup></p>
+                        <p class="p smallGrayText">Weekly Profit</p>
+
+                    </div>
+                    <div class="box box-right-top ">
+                        <i class=" threeDots fa-solid fa-ellipsis-vertical"></i>
+                        <i class="lightGray icon fa-solid fa-dollar-sign"></i>
+                        <p class="text">Refunds</p>
+                        <p class="text">$78 <sup style="color: red;">-15%</sup></p>
+                        <p class="p smallGrayText">Past Month</p>
+
+                    </div>
+                    <div class="box box-left-bottom ">
+                        <i class=" threeDots fa-solid fa-ellipsis-vertical"></i>
+                        <i class="blue icon fa-solid fa-briefcase"></i>
+                        <p class="text">New Project</p>
+                        <p class="text">862 <sup style="color: red;">-18%</sup></p>
+                        <p class="p smallGrayText">Yearly Project</p>
+
+                    </div>
+                    <div class="box box-right-bottom ">
+                        <i class=" threeDots fa-solid fa-ellipsis-vertical"></i>
+                        <i class="orange icon fa-regular fa-circle-question"></i>
+                        <p class="text">Sales Queries</p>
+                        <p class="text">15 <sup style="color: red;">-18%</sup></p>
+                        <p class="p smallGrayText">last Week</p>
+
+                    </div>
+                </div>
+
+            </section>
+
+
+
+            <section class="sales clearfix">
+                <div class="box sales-card">
+                    <h3>Sales by Countries</h3>
+                    <ul>
+                        <li class="clearfix">
+                            <div> <span class="flag us orange">US</span></div>
+
+                            <div>
+                                <span class="amount">$8,656k <sup class="up"><i class="fa-solid fa-caret-up"></i>25.8%</sup></span> 
+                                <span class="smallGrayText">USA</span>
+                            </div>
+                             
+                              <div class="lastDiv">
+                                <span class="amount">894k</span>
+                                <p class="smallGrayText">Sales</p>
+                            </div>  
+                            </li>
+
+                        <li class="clearfix">
+                             <div><span class="flag uk green">UK</span></div>
+                    
+                             <div>
+                             <span class="amount">$2,415k <sup class="down"><i class="fa-solid fa-caret-down"></i>6.2%</sup></span>  
+                             <span class="smallGrayText">UK</span>
+
+                            </div>
+
+                            <div class="lastDiv">
+                             <span class="amount">645k</span>
+                             <p class="smallGrayText">Sales</p>
+                            </div>    
+                            </li>
+                           
+
+                        <li class="clearfix">
+                             <div><span class="flag in orange">IN</span></div>
+
+                             <div>
+                             <span class="amount">$865k <sup class="up"><i class="fa-solid fa-caret-up"></i>12.4%</sup></span> 
+                             <span class="smallGrayText">India</span>
+
+                            </div>
+
+                            <div class="lastDiv">
+                             <span class="amount">148k</span>
+                             <p class="smallGrayText">Sales</p>
+                            </div> 
+                            </li>
+
+                        <li class="clearfix">
+                            <div><span class="flag ja lightGray">JA</span> </div>
+                            <div>
+                            <span class="amount">$745k <sup class="down"> <i class="fa-solid fa-caret-down"></i>11.9%</sup></span>  
+                            <span class="smallGrayText">japan</span>
+
+                        </div>
+                        <div class="lastDiv">
+                            <span class="amount">86k</span>
+                            <p class="smallGrayText">Sales</p>                        
+                        </div> 
+                        </li>
+
+                        <li class="clearfix">
+                            <div> <span class="flag ko green">KO</span> </div>
+                            <div>
+
+                            <span class="amount">$45k <sup class="up"> <i class="fa-solid fa-caret-up"></i> 16.2%</sup></span> 
+                            <span class="smallGrayText">korea</span>
+
+                        </div>
+
+                        <div class="lastDiv">
+                            <span class="amount">42k</span>
+                            <p class="smallGrayText">Sales</p>
+                        </div> 
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="deposit-withrawWrrapper box" >
+                
+                
+                <div class="deposit">
+                    <h3>Deposit <span class="view">View All</span></h3>
+                    <ul>
+                        <li>
+                            <figure>
+                                <img src="img/gumrod.png" alt="">
+                            </figure>
+                            <div class="center">Gumroad Account <p class="smallGrayText">Sell UI Kit</p></div>
+                     <span class="right">+4,650</span>
+                    </li>
+                        <li>
+                            <figure>
+                                <img src="img/mastercard.png" alt="">
+                            </figure>
+                            <div class="center">Mastercard <p class="smallGrayText">Wallet Deposit</p></div>
+                                <span class="right">+92,705</span></li>
+                        <li>
+                            <figure>
+                                <img src="img/stripe.png" alt="">
+                            </figure>
+                            <div class="center">Stripe Account <p class="smallGrayText">IOS Application</p></div>
+                                 <span class="right">+957</span></li>
+                        <li>
+                            <figure>
+                                <img src="img/americanBank.png" alt="">
+                            </figure>
+                            <div class="center">American Bank <p class="smallGrayText">Bank Transfer</p></div>
+                                <span class="right">+6,837</span></li>
+                        <li>
+                            <figure>
+                                <img src="img/bankAccount.png" alt="">
+                            </figure>
+                            <div class="center">Bank Account <p class="smallGrayText">Wallet Deposit</p></div>
+                                 <span class="right">+446</span></li>
+                        </ul>
+                </div>
+
+                
+                <div class="withdraw">
+                    <h3>Withdraw <span class="view">View All</span></h3>
+                    <ul>
+                        <li>
+                            <figure>
+                                <img src="img/google.png" alt="">
+                            </figure>
+                            <div class="center">Google Adsense <p class="smallGrayText">Sell UI Kit</p></div>
+                     <span class="right negative">-145</span>
+                    </li>
+                        <li>
+                            <figure>
+                                <img src="img/github.png" alt="">
+                            </figure>
+                            <div class="center">Github Enterprise <p class="smallGrayText">Wallet Deposit</p></div>
+                                <span class="right negative">-1870</span></li>
+                        <li>
+                            <figure>
+                                <img src="img/slack.png" alt="">
+                            </figure>
+                            <div class="center">Upgrade Slack Plan <p class="smallGrayText">IOS Application</p></div>
+                                 <span class="right negative">-45</span></li>
+                        <li>
+                            <figure>
+                                <img src="img/digitalOcean.png" alt="">
+                            </figure>
+                            <div class="center">Digital Ocean <p class="smallGrayText">Bank Transfer</p></div>
+                                <span class="right negative">-540</span></li>
+                        <li>
+                            <figure>
+                                <img src="img/aws.png" alt="">
+                            </figure>
+                            <div class="center">AWS Account <p class="smallGrayText">Wallet Deposit</p></div>
+                                 <span class="right negative">-21</span></li>
+
+
+
+                    </ul>
+                </div>
+            </div>
+
+            </section>
+            <section class="tableSection box">
+
+                <table class="table">
+                    <tr>
+                        <th>NAME</th>
+                        <th>EMAIL</th>
+                        <th>DATE</th>
+                        <th>SALARY</th>
+                        <th>AGE</th>
+                        <th>STATUS</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="bigGrayText h">Sally Quinn</p>
+                            <p class="smallGrayText">Human Resource Assistant</p>
+                        </td>
+                        <td>
+                            <p class="bigGrayText">eebsworth2m@sbwire.com</p>
+                        </td>
+                        <td>
+                            <p class="bigGrayText">09/27/2018</p>
+                        </td>
+                        <td>
+                           <p class="bigGrayText">$19586.23</p> 
+                        </td>
+                        <td>
+                            <p class="bigGrayText">27</p>
+                        </td>
+                        <td>
+                            <span class="tag blue"> Current</span>
+                        </td>
+                    </tr>
+            
+                    <tr>
+                    <tr>
+                        <td>
+                            <p class="bigGrayText h">Margaret Bowers </p>
+                            <p class="smallGrayText">Nuclear Power Engineer</p>
+                        </td>
+                        <td>
+                            <p class="bigGrayText">kocrevy0@thetimes.co.uk</p>
+                        </td>
+                        <td>
+                            <p class="bigGrayText">09/23/2016</p>
+                        </td>
+                        <td>
+                           <p class="bigGrayText">$23896.35</p> 
+                        </td>
+                        <td>
+                            <p class="bigGrayText">61</p>
+                        </td>
+                        <td>
+                            <span class="tag green"> Professional</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="bigGrayText h">Minnie Roy</p>
+                            <p class="smallGrayText">Environmental Specialist</p>
+                        </td>
+                        <td>
+                            <p class="bigGrayText">ediehn6@163.com</p>
+                        </td>
+                        <td>
+                            <p class="bigGrayText">10/15/2017</p>
+                        </td>
+                        <td>
+                           <p class="bigGrayText">$18991.67</p> 
+                        </td>
+                        <td>
+                            <p class="bigGrayText">59</p>
+                        </td>
+                        <td>
+                            <span class="tag red"> Rejected</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="bigGrayText h">Ralph Leonard</p>
+                            <p class="smallGrayText">Sales Representative</p>
+                        </td>
+                        <td>
+                            <p class="bigGrayText">dfalloona@ifeng.com</p>
+                        </td>
+                        <td>
+                            <p class="bigGrayText">06/12/2018</p>
+                        </td>
+                        <td>
+                           <p class="bigGrayText">$19252.12</p> 
+                        </td>
+                        <td>
+                            <p class="bigGrayText">30</p>
+                        </td>
+                        <td>
+                            <span class="tag orange"> Resigned</span>
+                        </td>
+                    </tr>
+                 
+                    <tr>
+                        <td>
+                            <p class="bigGrayText h">Annie Martin </p>
+                            <p class="smallGrayText">Operator</p>
+                        </td>
+                        <td>
+                            <p class="bigGrayText">sganderton2@tuttocitta.it</p>
+                        </td>
+                        <td>
+                            <p class="bigGrayText">03/24/2018</p>
+                        </td>
+                        <td>
+                           <p class="bigGrayText">$13076.28</p> 
+                        </td>
+                        <td>
+                            <p class="bigGrayText">66</p>
+                        </td>
+                        <td>
+                            <span class="tag lightBlue"> Applied</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="bigGrayText h">Adeline Day</p>
+                            <p class="smallGrayText">Senior Cost Accountant</p>
+                        </td>
+                        <td>
+                            <p class="bigGrayText">hnisius4@gnu.org</p>
+                        </td>
+                        <td>
+                            <p class="bigGrayText">08/25/2017</p>
+                        </td>
+                        <td>
+                           <p class="bigGrayText">$10909.52</p> 
+                        </td>
+                        <td>
+                            <p class="bigGrayText">33</p>
+                        </td>
+                        <td>
+                            <span class="tag green"> Professional</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="bigGrayText h">Lora Jackson</p>
+                            <p class="smallGrayText">Geologist</p>
+                        </td>
+                        <td>
+                            <p class="bigGrayText">ghoneywood5@narod.ru</p>
+                        </td>
+                        <td>
+                            <p class="bigGrayText">06/01/2017</p>
+                        </td>
+                        <td>
+                           <p class="bigGrayText">$17803.80</p> 
+                        </td>
+                        <td>
+                            <p class="bigGrayText">61</p>
+                        </td>
+                        <td>
+                            <span class="tag blue"> Current</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="bigGrayText h">Rodney Sharp</p>
+                            <p class="smallGrayText">Cost Accountant</p>
+                        </td>
+                        <td>
+                            <p class="bigGrayText">dcrossman3@google.co.jp</p>
+                        </td>
+                        <td>
+                            <p class="bigGrayText">12/03/2017</p>
+                        </td>
+                        <td>
+                           <p class="bigGrayText">$12336.17</p> 
+                        </td>
+                        <td>
+                            <p class="bigGrayText">22</p>
+                        </td>
+                        <td>
+                            <span class="tag green"> Professional</span>
+                        </td>
+                    </tr>
+                   
+                </table>
+            </section>
+
+
+
+
+
+            <footer>
+                <p>@ 2023, copyright</p>
+
+                
+            <ul>
+                <li><a href="">MIT License</a></li>
+                <li><a href="">More Themes</a></li>
+                <li><a href="">Documentation</a></li>
+                <li><a href="">Support</a></li>
+            </ul>
+            </footer>
+
+
+
+
+
+
+
+        </main>
+    </div>
+
+
+</body>
+<script>
+    const sidebar = document.getElementById("sidebar");
+
+    function toggleSidebar(){
+        sidebar.classList.toggle("open")
+    }
+</script>
+
+</html>
