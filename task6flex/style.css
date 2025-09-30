@@ -61,8 +61,51 @@
     margin: 5px 0px;
 }
 
+.dark-mode{
+    background-color: black;
+    color: white;
+}
+
+.dark-mode .box{
+    background-color: rgb(54, 53, 53);
+}
+
+.dark-mode aside{
+    background-color: black;
+    color: white;
+}
+
+.dark-mode ul li a,.dark-mode ul li i{
+    color: white;
+}
+
+.dark-mode .h2,.dark-mode .card-stats p span {
+    color: white !important;
+}
 
 
+.dark-mode .card-stats ul li h3{
+    color: white;
+}
+
+.dark-mode .logo h1 a{
+    color: white;
+}
+
+
+.dark-mode .user-icons a{
+    color: white;
+}
+
+
+.dark-mode .smallGrayText{
+    color: white;
+}
+
+
+.dark-mode .hamburger{
+    color: white;
+}
 body {
     background: #f7f8fc;
     color: #333;
@@ -117,6 +160,10 @@ body {
 .input {
 
     padding-top: 10px;
+}
+
+a:active {
+    color: transparent;
 }
 
 .search {
@@ -417,7 +464,7 @@ a.profileLink {
     top: 8px;
 }
 
-.charts{
+.charts {
     display: flex;
     justify-content: space-between;
 }
@@ -425,19 +472,20 @@ a.profileLink {
 .card-chart {
     width: 32%;
     margin-right: 3%;
-    
+
     position: relative;
 }
 
 
-.earning{
+.earning {
     display: flex;
     width: 65%;
     justify-content: space-between;
 }
+
 .card-earning {
     width: 49%;
-    
+
     position: relative;
     min-height: 310px;
 
@@ -446,7 +494,7 @@ a.profileLink {
 .small {
     width: 35%;
     text-align: center;
-    
+
     position: relative;
 }
 
@@ -469,7 +517,7 @@ button.details {
 figure {
     width: 100%;
     height: auto;
-    
+
 }
 
 img {
@@ -477,7 +525,8 @@ img {
     height: auto;
     display: block;
 }
-.icon{
+
+.icon {
     display: flex;
 }
 
@@ -492,7 +541,7 @@ img {
 }
 
 i.icon {
-    
+
     text-align: center;
     padding: 10px;
     width: 35px;
@@ -558,7 +607,7 @@ i.icon {
 .box-left-top,
 .box-left-bottom {
     width: 48%;
-   
+
     min-height: 145px;
 
 
@@ -567,7 +616,7 @@ i.icon {
 .box-right-top,
 .box-right-bottom {
     width: 48%;
- 
+
     min-height: 145px;
 
 }
@@ -597,7 +646,7 @@ i.icon {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    
+
 }
 
 .deposit-withrawWrrapper figure {
@@ -607,8 +656,8 @@ i.icon {
 
 .deposit-withrawWrrapper .center {
     width: 60%;
-    
-    
+
+
 }
 
 
@@ -626,7 +675,8 @@ i.icon {
 }
 
 
-.deposit h3,.withdraw h3{
+.deposit h3,
+.withdraw h3 {
     display: flex;
     justify-content: space-between;
 }
@@ -681,7 +731,7 @@ ul {
 }
 
 
-.amount-div{
+.amount-div {
     width: 60%;
 }
 
@@ -702,13 +752,13 @@ ul {
 
 
 .sales-num {
-   
+
     color: #777;
 }
 
 /* Deposits/Withdraw amounts */
 .right {
-   
+
     color: green;
     font-weight: bold;
 }
