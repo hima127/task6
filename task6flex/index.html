@@ -22,7 +22,7 @@
                 <input type="text" class="search">
             </div>
             <div class="user-icons">
-                <a href=""><i class="fa-solid fa-moon"></i></a>
+                <a href="#" id="sun"><i class="fa-solid fa-moon"></i></a>
                 <a href=""><i class="fa-solid fa-bell"></i></a>
                 <a href="" class="profileLink">
 
@@ -126,14 +126,14 @@
                     <button class="details button">DETAILS</button>
                 </div>
 
-                    <div class="earning">
+                <div class="earning">
 
-                <div class="card-earning box">
-                    <i class=" threeDots fa-solid fa-ellipsis-vertical"></i>
-                    <h4 class="h4">Total Earnings</h4>
+                    <div class="card-earning box">
+                        <i class=" threeDots fa-solid fa-ellipsis-vertical"></i>
+                        <h4 class="h4">Total Earnings</h4>
 
-                    <h5 class="h5">$24,895 <sup><i class="fa-solid fa-caret-up"><span>10%</span></i></sup> </h5>
-                    <p class="p smallGrayText">Compared to $84,325 last year</p>
+                        <h5 class="h5">$24,895 <sup><i class="fa-solid fa-caret-up"><span>10%</span></i></sup> </h5>
+                        <p class="p smallGrayText">Compared to $84,325 last year</p>
 
 
                         <div class="card-earning-title">
@@ -635,5 +635,23 @@
         sidebar.classList.toggle("open")
     }
 </script>
+
+<script>
+    document.getElementById('sun').addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.body.classList.toggle('dark-mode');
+
+        const icon = this.querySelector('i');
+        if (icon.classList.contains('fa-moon')) {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        } else {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+        }
+    });
+</script>
+
 
 </html>
